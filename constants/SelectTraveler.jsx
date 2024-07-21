@@ -57,4 +57,6 @@ export const SelectBudgetList = [
     }
   ];
 
+export const GEMINI_PROMPT='Generate travel plan for location: {location} for {totalNoOfDays} Days and {nights} nights for {traveler} with a {budget} budget with a Flight details, Flight Price with booking url, Hotels Options list with HotelName, Hotel addres, Price, hotel image url, geo coordinates, rating, descriptions and places to visit nearby with placeName, Place details, place image url, Geo coordinates, ticket pricing, Time to travel each of the location for {totalNoOfDays} days and {nights} nights with each day plan with best time to visit in JSON format';
+
 export default SelectTravelerList;

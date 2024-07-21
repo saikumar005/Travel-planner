@@ -7,6 +7,7 @@ import moment from 'moment';
 
 export default function ReviewTrip() {
     const navigation=useNavigation();
+    const router=useRouter();
     const {tripData,setTripData}=useContext(CreateTripContext);
     const iconsList={
         location:'📍',
@@ -49,8 +50,10 @@ export default function ReviewTrip() {
         <SelectionBox icon={iconsList.bus} heading={'Who is Traveling'} textToDisplay={tripData?.travelers?.title} />
         <SelectionBox icon={iconsList.cost} heading={'Budget'} textToDisplay={tripData?.budget} />
       </View>
-      <TouchableOpacity style={[styles.button,{backgroundColor:Colors.PRIMARY}]}>
-        <Text style={[styles.buttonText,{color:Colors.WHITE}]}>Continue</Text>
+      <TouchableOpacity style={[styles.button,{backgroundColor:Colors.PRIMARY}]}
+      onPress={()=>router.replace('/mytrip/generate-trip')}
+      >
+        <Text style={[styles.buttonText,{color:Colors.WHITE}]}>Build My Trip</Text>
       </TouchableOpacity>
     </View>
   )
